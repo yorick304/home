@@ -18,7 +18,7 @@ html,body {
 
 #smohan-v4-container section {
 	height: 100%;
-	background-color: #212220;
+	background-color: #000;
 	overflow: hidden
 }
 
@@ -44,121 +44,84 @@ h1 {
 }
 
 #v4-pre-loaded {
-	background-color: #212220;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: hidden;
-	z-index: 19900207;
-	text-align: center;
-	-webkit-transition: all .36s linear;
-	transition: all .36s linear
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 19900207;
+    text-align: center;
+    -webkit-transition: all .36s linear;
+    transition: all .36s linear
 }
 
 #v4-pre-loaded:before,#v4-pre-loaded .loading {
-	display: inline-block;
-	vertical-align: middle
+    display: inline-block;
+    vertical-align: middle
 }
 
 #v4-pre-loaded:before {
-	content: '';
-	height: 100%
+    content: '';
+    height: 100%
 }
 
 #v4-pre-loaded .loading {
-	width: 146px;
-	height: 146px;
-	background: url(../img/smohan_logo_mask.png) 50% no-repeat;
-	background-size: cover;
-	-webkit-transition: all .36s linear;
-	transition: all .36s linear;
-	-webkit-animation: loadingInit .6s linear 1 forwards,changeBackground 2.4s linear 1s infinite;
-	animation: loadingInit .6s linear 1 forwards,changeBackground 2.4s linear 1s infinite;
-	/*margin-top: -148px*/
+    width: 146px;
+    height: 146px;
+    background: url(../img/smohan_logo_mask.png) 50% no-repeat;
+    background-size: cover;
+    -webkit-transition: all .36s linear;
+    transition: all .36s linear;
+    -webkit-animation: loadingInit 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite;
+              animation: loadingInit 1.3s cubic-bezier(0.30, 2.40, 0.85, 2.50) infinite; 
+    /*margin-top: -148px*/
 }
 
 #v4-pre-loaded .loading:after {
-	width: 100%;
-	line-height: 36px;
-	content: 'The page is loading...';
-	position: absolute;
-	left: 0;
-	bottom: -36px;
-	font-size: 14px;
-	text-align: center;
-	color: #787977;
-	opacity: 0;
-	-webkit-transition: opacity .36s linear;
-	transition: opacity .36s linear;
-	-webkit-animation: fadeIn .8s linear 1s 1 forwards;
-	animation: fadeIn .8s linear 1s 1 forwards
+    width: 100%;
+    line-height: 36px;
+    content: 'The page is loading...';
+    position: absolute;
+    left: 0;
+    bottom: -36px;
+    font-size: 14px;
+    text-align: center;
+    color: #787977;
+    opacity: 0;
+    -webkit-transition: opacity .36s linear;
+    transition: opacity .36s linear;
+    -webkit-animation: fadeIn .8s linear 1s 1 forwards;
+    animation: fadeIn .8s linear 1s 1 forwards
 }
 
 @-webkit-keyframes loadingInit {
-	0% {
-		-webkit-transform: rotate(0deg) scale(0);
-		opacity: 0
-	}
-
-	100% {
-		-webkit-transform: rotate(1080deg) scale(1);
-		opacity: 1
-	}
+    from, to {
+    -webkit-transform: translateY(-15vh) scaleY(1.02);
+            transform: translateY(-15vh) scaleY(1.02);
+    }
+    80% {
+    -webkit-transform: translateY(-30vh) scaleY(.98);
+            transform: translateY(-30vh) scaleY(.98);
+    }
 }
 
 @keyframes loadingInit {
-	0% {
-		transform: rotate(0deg) scale(0);
-		opacity: 0
-	}
-
-	100% {
-		transform: rotate(1080deg) scale(1);
-		opacity: 1
-	}
-}
-
-@-webkit-keyframes changeBackground {
-	0% {
-		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
-		background-size: cover
-	}
-
-	50% {
-		background: url(../img/logo_flat.png) 50% no-repeat;
-		background-size: cover
-	}
-
-	100% {
-		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
-		background-size: cover
-	}
-}
-
-@keyframes changeBackground {
-	0% {
-		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
-		background-size: cover
-	}
-
-	40% {
-		background: url(../img/logo_flat.png) 50% no-repeat;
-		background-size: cover
-	}
-
-	100% {
-		background: url(../img/smohan_logo_mask.png) 50% no-repeat;
-		background-size: cover
-	}
+    from, to {
+    -webkit-transform: translateY(-15vh) scaleY(1.02);
+            transform: translateY(-15vh) scaleY(1.02);
+    }
+    80% {
+    -webkit-transform: translateY(-30vh) scaleY(.98);
+            transform: translateY(-30vh) scaleY(.98);
+    }
 }
 
 #v4-pre-loaded.hide {
-	opacity: 0;
-	visibility: hidden
+    opacity: 0;
+    visibility: hidden
 }
-
 .page-dots {
 	position: fixed;
 	width: 14px;
@@ -223,7 +186,7 @@ h1 {
 }
 
 .dot.current:before,.dot.current:after {
-	border-color: rgba(255,255,255,.6);
+	border-color: #258fb8;
 	-webkit-animation: blink 3s linear infinite;
 	animation: blink 3s linear infinite
 }
@@ -286,7 +249,7 @@ h1 {
 .page1 .m-driver {
 	width: 740px;
 	height: 435px;
-	background: url(../img/device-main.jpg) 50% no-repeat;
+	background: url(../img/device-main.png) 50% no-repeat;
 	background-size: 100% auto;
 	margin: 40px auto 0 auto;
 	position: relative
@@ -294,6 +257,7 @@ h1 {
 
 .page1 .m-driver .inner {
 	position: absolute;
+	z-index: 5;
 	width: 547px;
 	height: 336px;
 	top: 33px;
@@ -360,7 +324,7 @@ h1 {
 	bottom: 50px;
 	left: 50%;
 	margin-left: -25px;
-	z-index: 0;
+	z-index: 10;
 	background-color: #111210;
 	-webkit-transition: all .5s ease-out;
 	transition: all .5s ease-out
@@ -1873,11 +1837,14 @@ h1 {
 	right: 50px
 }
 
-.page-init .inner {
+.page-init>.inner {
 	position: absolute;
 	/* float: left; */
 	top: 50%;
+	left: 50%;
 	/* top: -80px; */
+	transform:translate(-50%,-50%);
+	z-index: 5;
 }
 .tans{
 	transform:translate(0,-50%);
@@ -1893,7 +1860,7 @@ h1 {
 }
 
 .page-init .inner {
-	width: 100%
+	/*width: 100%*/
 }
 
 .page3 .m-works-wrap {
@@ -2147,7 +2114,7 @@ h1 {
 		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
 	}
 
-	100% {
+	80% {
 		-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg)
 	}
 }
@@ -2157,7 +2124,7 @@ h1 {
 		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
 	}
 
-	100% {
+	80% {
 		transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg)
 	}
 }
@@ -2265,7 +2232,7 @@ h1 {
 #smohan-title-tip {
 	text-align: center;
 	color: #fff;
-	background: rgba(0,0,0,.8);
+	background: #258fb8;
 	position: absolute;
 	z-index: 100;
 	padding: 5px 15px;
@@ -2279,7 +2246,7 @@ h1 {
 	height: 0;
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
-	border-top: 8px solid rgba(0,0,0,.8);
+	border-top: 8px solid #258fb8;
 	content: '';
 	position: absolute;
 	left: 50%;
@@ -2289,7 +2256,7 @@ h1 {
 
 #smohan-title-tip.top:after {
 	border-top-color: transparent;
-	border-bottom: 8px solid rgba(0,0,0,.8);
+	border-bottom: 8px solid #258fb8;
 	top: -16px;
 	bottom: auto
 }
